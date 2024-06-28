@@ -2818,7 +2818,7 @@ section,
 }
 
 #services {
-  max-width: 90%;
+  width: 90%;
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
@@ -2841,7 +2841,7 @@ section,
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
-  width: 400px;
+  width: 30%;
   height:350px ;
   padding: 20px;
   text-align: left;
@@ -2900,3 +2900,18 @@ section,
   }
 }
 
+@media (min-width: 600px) and (max-width: 1380px) {
+  .sectionservices-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionservice-card {
+    width: 70%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vh;
+}
+
+}
