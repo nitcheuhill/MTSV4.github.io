@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/yourusername/public_html
+    - export DEPLOYPATH=/home/megatradingcm/public_html
     - /bin/cp -r * $DEPLOYPATH
