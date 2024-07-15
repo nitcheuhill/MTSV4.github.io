@@ -1,288 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MTS Online</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>MTS Online</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <link href="assets/img/favicon (2).png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <link href="assets/img/favicon (2).png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
- 
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
 
- 
-  <link href="assets/css/main.css" rel="stylesheet">
+  <body class="service-details-page">
+    <header id="header" class="header fixed-top">
+      <div class="branding d-flex align-items-cente">
+        <div
+          class="container position-relative d-flex align-items-center justify-content-between"
+        >
+          <a href="index.html">
+            <img
+              src="assets/img/Logo1-removebg-preview.png"
+              alt="Logo"
+              class="logo-img"
+              style="height: 50px; margin-right: 0.5rem"
+            />
+            <span class="company-name" style="color: wheat"
+              >Mega Trading & Services</span
+            >
+          </a>
 
- 
-</head>
-
-<body class="service-details-page">
-
-  
-  <header id="header" class="header fixed-top">
-
-
-
-    <div class="branding d-flex align-items-cente">
-
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html">
-          <img src="assets/img/Logo1-removebg-preview.png" alt="Logo" class="logo-img"
-            style="height: 50px;margin-right: 0.5rem;" />
-          <span class="company-name" style="color: white;">Mega Trading & Services</span>
-        </a>
-
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html#hero" >Home<br></a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#portfolio">Products</a></li>
-            <!-- <li><a href="#team">Team</a></li> -->
-            <!-- <li><a href="blog.html">Blog</a></li> -->
-            <li class="dropdown"><a href="index.html#services" class="active"><span>Description</span> <i
-                  class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="broderie.html">Broderie</a></li>
-                <li class="dropdown"><a href="imprimerie.html"><span>Imprimerie</span> <i
-                      class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="offset.html">Offset</a></li>
-                    <li><a href="numerique.html">Numérique</a></li>
-                  </ul>
-                </li>
-                <li><a href="packaging.html">Packaging</a></li>
-                <li><a href="serigraphie.html">Sérigraphie</a></li>
-                <li><a href="signaletique.html">Signalétique</a></li>
-                <li><a href="tampographie.html">Tampographie</a></li>
-              </ul>
-            </li>
-            <li><a href="index.html#contact">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-      </div>
-
-    </div>
-
-  </header>
-  
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Sérigraphie</h1>
-              <p class="mb-0">Exprimez votre créativité avec la sérigraphie, l'art de l'impression parfaite!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current"><a href="serigraphie.html"> Sérigraphie Details </a></li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
-
-    <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="services-list">
-              <a href="broderie.html" >Broderie</a>
-              <a href="numerique.html">Imprimerie</a>
-              <a href="packaging.html" >Packaging</a>
-              <a href="serigraphie.html" class="active">Sérigraphie</a>
-              <a href="signaletique.html">Signalétique</a>
-              <a href="tampographie.html">Tampographie</a>
-            </div>
-
-          
-          </div>
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200" >
-            
-            <img style="height: 60vh;width: 70%;" src="imgSite/Serigaphe.jpg" alt="" class="img-fluid services-img">
-            
-            <h3>Qu' est ce que la sérigraphie ? </h3>
-            <p style="line-height: 1.9;"> 
-                La sérigraphie est une technique d'impression polyvalente et durable, idéale pour transférer des designs vibrants et complexes sur une variété de surfaces. Que ce soit pour des textiles comme des t-shirts, des sacs, ou des tissus décoratifs, ou pour des matériaux comme le bois, le métal, et le verre, la sérigraphie garantit des résultats de haute qualité. Utilisant des pochoirs et des encres spéciales, cette méthode permet de reproduire des couleurs éclatantes et des détails fins, faisant de chaque pièce une œuvre d'art unique. Adoptez la sérigraphie pour vos besoins publicitaires, vos projets artistiques, ou pour offrir des cadeaux personnalisés inoubliables. 
-            </p>
+          <nav id="navmenu" class="navmenu">
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Flexibilité </span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Couleurs vives et opaques</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Coût-efficacité pour les grandes séries </span></li>
+              <li>
+                <a href="index.html#hero">Accueil<br /></a>
+              </li>
+              <li><a href="index.html#about">À propos</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="index.html#portfolio">Produits</a></li>
+              <li class="dropdown">
+                <a href="index.html#services" class="active"
+                  ><span>Description</span>
+                  <i class="bi bi-chevron-down toggle-dropdown"></i
+                ></a>
+                <ul>
+                  <li><a href="broderie.html">Broderie</a></li>
+                  <li class="dropdown">
+                    <a href="imprimerie.html"
+                      ><span>Imprimerie</span>
+                      <i class="bi bi-chevron-down toggle-dropdown"></i
+                    ></a>
+                    <ul>
+                      <li><a href="offset.html">Offset</a></li>
+                      <li><a href="numerique.html">Numérique</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="packaging.html">Packaging</a></li>
+                  <li><a href="serigraphie.html">Sérigraphie</a></li>
+                  <li><a href="signaletique.html">Signalétique</a></li>
+                  <li><a href="tampographie.html">Tampographie</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html#contact">Contact</a></li>
             </ul>
-      
-          </div>
-
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
         </div>
-
       </div>
+    </header>
 
-    </section><!-- /Service Details Section -->
-     
-    <section id="team" class="team section">
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title">
+        <div class="heading">
+          <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-8">
+                <h1>Sérigraphie</h1>
+                <p class="mb-0">
+                  Exprimez votre créativité avec la sérigraphie, l'art de
+                  l'impression parfaite!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="index.html">Accueil</a></li>
+              <li class="current">
+                <a href="serigraphie.html"> Sérigraphie Détails </a>
+              </li>
+            </ol>
+          </div>
+        </nav>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Service Details Section -->
+      <section id="service-details" class="service-details section">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="services-list">
+                <a href="broderie.html">Broderie</a>
+                <a href="numerique.html">Imprimerie</a>
+                <a href="packaging.html">Packaging</a>
+                <a href="serigraphie.html" class="active">Sérigraphie</a>
+                <a href="signaletique.html">Signalétique</a>
+                <a href="tampographie.html">Tampographie</a>
+              </div>
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <img
+                style="height: 60vh; width: 70%"
+                src="imgSite/Serigaphe.jpg"
+                alt=""
+                class="img-fluid services-img"
+              />
+
+              <h3>Qu' est ce que la sérigraphie ?</h3>
+              <p style="line-height: 1.9">
+                La sérigraphie est une technique d'impression polyvalente et
+                durable, idéale pour transférer des designs vibrants et
+                complexes sur une variété de surfaces. Que ce soit pour des
+                textiles comme des t-shirts, des sacs, ou des tissus décoratifs,
+                ou pour des matériaux comme le bois, le métal, et le verre, la
+                sérigraphie garantit des résultats de haute qualité. Utilisant
+                des pochoirs et des encres spéciales, cette méthode permet de
+                reproduire des couleurs éclatantes et des détails fins, faisant
+                de chaque pièce une œuvre d'art unique. Adoptez la sérigraphie
+                pour vos besoins publicitaires, vos projets artistiques, ou pour
+                offrir des cadeaux personnalisés inoubliables.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-check-circle"></i> <span>Flexibilité </span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i>
+                  <span>Couleurs vives et opaques</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i>
+                  <span>Coût-efficacité pour les grandes séries </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Service Details Section -->
+
+      <section id="team" class="team section">
         <div class="container section-title" data-aos="fade-up">
           <h2>Nos supports</h2>
           <p>Des impressions exceptionnelles pour des marques inoubliables.</p>
-        </div><!-- End Section Title -->
-  
+        </div>
+        <!-- End Section Title -->
+
         <div class="container">
-  
           <div class="row gy-4">
-              
-              <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-                  <div class="member">
-                    <img src="imgSite/tshirt2.jpg" class="img-fluid" alt="">
-                    <h4>Vêtements personnalisés</h4>
-                    <span>Définissez votre marque.</span>
-                  </div>
-                </div><!-- End Team Member -->
-            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div class="member">
-                <img src="imgSite/affserigra.jpg" class="img-fluid" alt="">
+                <img src="imgSite/tshirt2.jpg" class="img-fluid" alt="" />
+                <h4>Vêtements personnalisés</h4>
+                <span>Définissez votre marque.</span>
+              </div>
+            </div>
+            <!-- End Team Member -->
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="member">
+                <img src="imgSite/affserigra.jpg" class="img-fluid" alt="" />
                 <h4>Affiches, flyers</h4>
                 <span>Faîtes savoir qui vous êtes.</span>
               </div>
-            </div><!-- End Team Member -->
-  
-            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div class="member">
-                <img src="imgSite/pull over.jpg" class="img-fluid" alt="">
+                <img src="imgSite/pull over.jpg" class="img-fluid" alt="" />
                 <h4>Pull over</h4>
                 <span>Le froid ne doit pas être un frein.</span>
-              
               </div>
-            </div><!-- End Team Member -->
-  
-            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div class="member">
-                <img src="imgSite/gadget pub.jpg" class="img-fluid" alt="">
+                <img src="imgSite/gadget pub.jpg" class="img-fluid" alt="" />
                 <h4>Gadgets publicitaires</h4>
                 <span>Impactez votre environnement!.</span>
               </div>
-            </div><!-- End Team Member -->
-            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            </div>
+            <!-- End Team Member -->
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div class="member">
-                <img src="imgSite/sac serigraphe.jpg" class="img-fluid" alt="">
+                <img
+                  src="imgSite/sac serigraphe.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
                 <h4>Pochette pour machine.</h4>
                 <span>Une protection avec votre design!.</span>
               </div>
-            </div><!-- End Team Member -->
-  
+            </div>
+            <!-- End Team Member -->
           </div>
-  
         </div>
-  
-      </section><!-- /Team Section -->
-  
+      </section>
+      <!-- /Team Section -->
+    </main>
 
-  </main>
+    <footer id="footer" class="footer">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-about">
+            <a href="index.html">
+              <img
+                src="assets/img/Logo1-removebg-preview.png"
+                alt="Logo"
+                class="logo-img"
+                style="height: 50px; margin-right: 0.5rem"
+              />
+            </a>
+            <p
+              style="
+                color: wheat;
+                font-size: 17px;
+                font-family: 'Poppins', sans-serif;
+              "
+            >
+              Mega Trading & Services
+            </p>
+            <p style="color: wheat">
+              Votre source de créativité et de qualité. Impression, broderie,
+              sérigraphie, tampographie, signalétique et packaging : tout ce
+              dont vous avez besoin pour faire briller votre marque, sous un
+              même toit.
+            </p>
+          </div>
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="broderie.html">Broderie</a></li>
+              <li><a href="offset.html">Imprimerie</a></li>
+              <li><a href="tampographie.html">Tampographie</a></li>
+              <li><a href="signaletique.html">Signalétique</a></li>
+              <li><a href="serigraphie.html">Sérigraphie</a></li>
+              <li><a href="packaging.html">Packaging</a></li>
+            </ul>
+          </div>
 
-  
-  <footer id="footer" class="footer">
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="index.html#hero">Home</a></li>
+              <li><a href="index.html#about">About us</a></li>
+              <li><a href="index.html#services">Services</a></li>
+            </ul>
+          </div>
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html">
-            <img src="assets/img/Logo1-removebg-preview.png" alt="Logo" class="logo-img"
-              style="height: 50px;margin-right: 0.5rem;" />
-            
-          </a>
-          <p style="color: black;">Mega Trading & Services</p>
-          <p style="color: black ;">Votre source de créativité et de qualité. Impression, broderie, sérigraphie, tampographie, signalétique et packaging : tout ce dont vous avez besoin pour faire briller votre marque, sous un même toit.</p>
-       
+          <div
+            class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+          >
+            <h4>Contact Us</h4>
+            <p>Ancienne pharmacie Bonadibong</p>
+            <p>Akwa Douala</p>
+            <p>Cameroun</p>
+            <p class="mt-4">
+              <strong>Phone:</strong> <span>+237 677 775 331</span>
+            </p>
+            <p>
+              <strong>Email:</strong> <span>megatradingsarl@gmail.com</span>
+            </p>
+          </div>
         </div>
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="broderie.html">Broderie</a></li>
-            <li><a href="offset.html">Imprimerie</a></li>
-            <li><a href="tampographie.html">Tampographie</a></li>
-            <li><a href="signaletique.html">Signalétique</a></li>
-            <li><a href="serigraphie.html">Sérigraphie</a></li>
-            <li><a href="packaging.html">Packaging</a></li>
-           
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="index.html#hero">Home</a></li>
-            <li><a href="index.html#about">About us</a></li>
-            <li><a href="index.html#services">Services</a></li>
-          </ul>
-        </div>
-
-       
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>Ancienne pharmacie Bonadibong</p>
-          <p>Akwa Douala</p>
-          <p>Cameroun</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+237 677 775 331</span></p>
-          <p><strong>Email:</strong> <span>megatradingsarl@gmail.com</span></p>
-        </div>
-
       </div>
-    </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">MTS</strong> <span>All Rights Reserved</span></p>
- 
-    </div>
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span> <strong class="px-1 sitename">MTS</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+    </footer>
 
-  </footer>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
