@@ -29,8 +29,6 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
- 
- 
 </head>
 
 <body class="index-page">
@@ -44,7 +42,7 @@
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html">
           <img src="assets/img/Logo1-removebg-preview.png" alt="Logo" class="logo-img"
-            style="height: 50px;margin-right: 0.5rem;" />
+            style="height: 45px;margin-right: 0.5rem;" />
           <span class="company-name" style="color: wheat;"> Mega Trading & Services</span>
         </a>
 
@@ -75,6 +73,8 @@
               </ul>
             </li>
             <li><a href="index.html#contact">Contact</a></li>
+            <li class="login-connect"> <button id="openModal"> <img class="login-connect-icon"
+                  src="assets/img/icon/utilisateur.png"> </button> </li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -98,8 +98,8 @@
             </p>
             <div class="d-flex">
               <a href="#about" class="btn-get-started">Get Started</a>
-              <a href="https://youtu.be/_wgIRx9rEgg"
-                class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch
+              <a href="https://youtu.be/_wgIRx9rEgg" class="glightbox btn-watch-video d-flex align-items-center"><i
+                  class="bi bi-play-circle"></i><span>Watch
                   Video</span></a>
             </div>
           </div>
@@ -109,7 +109,373 @@
         </div>
       </div>
 
-    
+
+      <!-- Modale -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <button class="close-btn" id="closeModal">&times;</button>
+          <div class="parent">
+            <img src="assets/img/icon/equipement-utilisateur.png">
+          </div>
+
+          <form id="loginForm">
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="emailconnect" name="email" required placeholder="Votre email">
+            </div>
+            <div>
+              <label for="password">Mot de passe:</label>
+              <input type="password" id="passwordconnect" name="password" required placeholder="Votre mot de passe">
+            </div>
+            <div>
+              <button type="submit" id="createAccountBtn">
+                <span id="spinner" class="spinner5" style="display: none;"></span>
+                Se connecter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      <!-- Modale de succès -->
+      <div id="successModal" class="modal1" style="display: none;">
+        <div class="modal-content1">
+          <button class="close-btn" id="closeSuccessModal">&times;</button>
+          <div class="headerdesc">
+            <h4>Page de management du site Mega Trading Sarl</h4>
+          </div>
+          <div style="overflow-y: auto;">
+
+
+            <div class="actionservice">
+              <button class="actionbutton" id="broderiebutton">
+                <img src="iconSite/cerceau-de-broderie.png" />
+                <div>Page de broderie</div>
+              </button>
+              <button class="actionbutton" id="imprimeriebutton">
+                <img src="iconSite/papier.png" />
+                <div>Page d'imprimerie</div>
+              </button>
+              <button class="actionbutton" id="serigaphiebutton">
+                <img src="iconSite/serigraphie.png" />
+                <div>Page de sérigraphie</div>
+              </button>
+              <button class="actionbutton" id="tampographiebutton">
+                <img src="iconSite/tampographie.png" />
+                <div>Page de tampographie</div>
+              </button>
+              <button class="actionbutton" id="signalétiquebutton">
+                <img src="iconSite/un-d.png" />
+                <div>Page de signalétique</div>
+              </button>
+              <button class="actionbutton" id="packagingbutton">
+                <img src="iconSite/eco-packaging.png" />
+                <div>Page de packaging</div>
+              </button>
+            </div>
+            <div class="headerdesc1">
+              <h4>Espace de gestion de contenu</h4>
+            </div>
+            <div class="descSpace" id="broderiedesc" style="display: none">
+              <div style="display: flex">
+                <div style="width: 30%">
+                  <form id="imageFormbroderie" class="InfoForm" enctype="multipart/form-data">
+                    <div>
+                      <label for="imageUpload">Choisissez une image :</label>
+                      <input type="file" id="imageUpload1" name="imageUpload" accept="image/*" required />
+                    </div>
+
+                    <div>
+                      <label for="imageName">Titre de l'image :</label>
+                      <input type="text" id="imageName1" name="imageName" required
+                        placeholder="Entrez le nom de l'image" />
+                    </div>
+
+                    <div>
+                      <label for="imageDescription">Description de l'image :</label>
+                      <textarea id="imageDescription1" name="imageDescription" rows="4"
+                        placeholder="Entrez une description de l'image" required></textarea>
+                    </div>
+
+                    <div>
+                      <button type="submit" class="sendimage">
+                        <span id="spinner1" class="spinner5" style="display: none"></span>
+                        Envoyer
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="tableresume">
+                  <!-- <p>Page de broderie</p> -->
+                  <div class="tableresume">
+                    <table id="productTable1">
+                      <thead>
+                        <tr>
+                          <th>Image</th>
+                          <th>Titre de l'image</th>
+                          <th>Description</th>
+                          <th >Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Les données seront ajoutées ici via JavaScript -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="descSpace" id="imprimeriedesc" style="display: none">
+              <div style="display: flex">
+                <div style="width: 30%">
+                  <form id="imageFormimprimerie" class="InfoForm" enctype="multipart/form-data">
+                    <div>
+                      <label for="imageUpload">Choisissez une image :</label>
+                      <input type="file" id="imageUpload2" name="imageUpload" accept="image/*" required />
+                    </div>
+
+                    <div>
+                      <label for="imageName">Titre de l'image :</label>
+                      <input type="text" id="imageName2" name="imageName" required
+                        placeholder="Entrez le nom de l'image" />
+                    </div>
+
+                    <div>
+                      <label for="imageDescription">Description de l'image :</label>
+                      <textarea id="imageDescription2" name="imageDescription" rows="4"
+                        placeholder="Entrez une description de l'image" required></textarea>
+                    </div>
+
+                    <div>
+                      <button type="submit" class="sendimage">
+                        <span id="spinner2" class="spinner5" style="display: none"></span>
+                        Envoyer
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="tableresume">
+                  <!-- <p>Page d' imprimerie</p> -->
+                  <div class="tableresume">
+                    <table id="productTable2">
+                      <thead>
+                        <tr>
+                          <th>Image</th>
+                          <th>Titre de l'image</th>
+                          <th>Description</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Les données seront ajoutées ici via JavaScript -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="descSpace" id="sérigraphiedesc" style="display: none">
+              <div style="display: flex">
+                <div style="width: 30%">
+                  <form id="imageFormserigraphie" class="InfoForm" enctype="multipart/form-data">
+                    <div>
+                      <label for="imageUpload">Choisissez une image :</label>
+                      <input type="file" id="imageUpload3" name="imageUpload" accept="image/*" required />
+                    </div>
+
+                    <div>
+                      <label for="imageName">Titre de l'image :</label>
+                      <input type="text" id="imageName3" name="imageName" required
+                        placeholder="Entrez le nom de l'image" />
+                    </div>
+
+                    <div>
+                      <label for="imageDescription">Description de l'image :</label>
+                      <textarea id="imageDescription3" name="imageDescription" rows="4"
+                        placeholder="Entrez une description de l'image" required></textarea>
+                    </div>
+
+                    <div>
+                      <button type="submit" class="sendimage">
+                        <span id="spinner3" class="spinner5" style="display: none"></span>Envoyer
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="tableresume">
+                  <!-- <p>Page de serigraphie</p> -->
+                  <div class="tableresume">
+                    <table id="productTable3">
+                      <thead>
+                        <tr>
+                          <th>Image</th>
+                          <th>Titre de l'image</th>
+                          <th>Description</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Les données seront ajoutées ici via JavaScript -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="descSpace" id="signalétiquedesc" style="display: none">
+              <div style="display: flex">
+                <div style="width: 30%">
+                  <form id="imageFormsignaletique" class="InfoForm" enctype="multipart/form-data">
+                    <div>
+                      <label for="imageUpload">Choisissez une image :</label>
+                      <input type="file" id="imageUpload4" name="imageUpload" accept="image/*" required />
+                    </div>
+
+                    <div>
+                      <label for="imageName">Titre de l'image :</label>
+                      <input type="text" id="imageName4" name="imageName" required
+                        placeholder="Entrez le nom de l'image" />
+                    </div>
+
+                    <div>
+                      <label for="imageDescription">Description de l'image :</label>
+                      <textarea id="imageDescription4" name="imageDescription" rows="4"
+                        placeholder="Entrez une description de l'image" required></textarea>
+                    </div>
+
+                    <div>
+                      <button type="submit" class="sendimage">
+                        <span id="spinner4" class="spinner5" style="display: none"></span>
+                        Envoyer
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="tableresume">
+                  <!-- <p>Page de signalétique</p> -->
+                  <div class="tableresume">
+                    <table id="productTable4">
+                      <thead>
+                        <tr>
+                          <th>Image</th>
+                          <th>Titre de l'image</th>
+                          <th>Description</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Les données seront ajoutées ici via JavaScript -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="descSpace" id="tampographiedesc" style="display: none">
+              <div style="display: flex">
+                <div style="width: 30%">
+                  <form id="imageFormtampographie" class="InfoForm" enctype="multipart/form-data">
+                    <div>
+                      <label for="imageUpload">Choisissez une image :</label>
+                      <input type="file" id="imageUpload5" name="imageUpload" accept="image/*" required />
+                    </div>
+
+                    <div>
+                      <label for="imageName">Titre de l'image :</label>
+                      <input type="text" id="imageName5" name="imageName" required
+                        placeholder="Entrez le nom de l'image" />
+                    </div>
+
+                    <div>
+                      <label for="imageDescription">Description de l'image :</label>
+                      <textarea id="imageDescription5" name="imageDescription" rows="4"
+                        placeholder="Entrez une description de l'image" required></textarea>
+                    </div>
+
+                    <div>
+                      <button type="submit" class="sendimage">
+                        <span id="spinner5" class="spinner5" style="display: none"></span>Envoyer
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="tableresume">
+                  <!-- <p>Page de tampographie</p> -->
+                  <div class="tableresume">
+                    <table id="productTable5">
+                      <thead>
+                        <tr>
+                          <th>Image</th>
+                          <th>Titre de l'image</th>
+                          <th>Description</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Les données seront ajoutées ici via JavaScript -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="descSpace" id="packagingdesc" style="display: none">
+              <div style="display: flex">
+                <div style="width: 30%">
+                  <form id="imageFormpackaging" class="InfoForm" enctype="multipart/form-data">
+                    <div>
+                      <label for="imageUpload">Choisissez une image :</label>
+                      <input type="file" id="imageUpload6" name="imageUpload" accept="image/*" required />
+                    </div>
+
+                    <div>
+                      <label for="imageName">Titre de l'image :</label>
+                      <input type="text" id="imageName6" name="imageName" required
+                        placeholder="Entrez le nom de l'image" />
+                    </div>
+
+                    <div>
+                      <label for="imageDescription">Description de l'image :</label>
+                      <textarea id="imageDescription6" name="imageDescription" rows="4"
+                        placeholder="Entrez une description de l'image" required></textarea>
+                    </div>
+
+                    <div>
+                      <button type="submit" class="sendimage">
+                        <span id="spinner6" class="spinner5" style="display: none"></span>Envoyer
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="tableresume">
+                  <!-- <p>Page de packaging</p> -->
+                  <div class="tableresume">
+                    <table id="productTable6">
+                      <thead>
+                        <tr>
+                          <th>Image</th>
+                          <th>Titre de l'image</th>
+                          <th>Description</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Les données seront ajoutées ici via JavaScript -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
 
     </section><!-- /Hero Section -->
 
@@ -264,7 +630,7 @@
                   <div>
                     <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1"
                       class="purecounter"></span>
-                    <p><strong>Plus de 150</strong> <span> CLients satisfait</span></p>
+                    <p><strong>Plus de 150</strong> <span> Clients satisfaits</span></p>
                   </div>
                 </div>
               </div><!-- End Stats Item -->
@@ -286,7 +652,8 @@
                   <div>
                     <span data-purecounter-start="0" data-purecounter-end="37500" data-purecounter-duration="1"
                       class="purecounter"></span>
-                    <p><strong>Plus de 37500 heures</strong> <span>de spécialisation dans ses différents services</span></p>
+                    <p><strong>Plus de 37500 heures</strong> <span>de spécialisation dans ses différents services</span>
+                    </p>
                   </div>
                 </div>
               </div><!-- End Stats Item -->
@@ -295,7 +662,7 @@
                 <div class="stats-item d-flex">
                   <i class="bi bi-people flex-shrink-0"></i>
                   <div>
-                    <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                    <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1"
                       class="purecounter"></span>
                     <p><strong>10 specialistes </strong> <span>sur chaque projet</span></p>
                   </div>
@@ -323,7 +690,7 @@
               <a href="https://youtu.be/xZjdiVELbJI" class="glightbox play-btn"></a>
               <h3>Call To Action</h3>
               <!-- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
-              <a class="cta-btn" href="#">Call To Action</a>
+              <a class="cta-btn" href="https://wa.me/237677775331">Call To Action</a>
             </div>
           </div>
         </div>
@@ -336,7 +703,7 @@
 
 
 
-    <section id="services"class="services section" >
+    <section id="services" class="services section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Nos Services</h2>
@@ -345,7 +712,10 @@
 
       <div class="sectionservices-container">
         <div class="sectionservice-card">
-          <img src="imgSite/imprimerieOffset.jpg" alt="Service 1">
+          <!-- <img src="imgSite/imprimerieOffset.jpg" alt="Service 1"> -->
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/mtssarl-28760.appspot.com/o/images%20site%2FimprimerieOffset.jpg?alt=media&token=4966c7c4-50fc-4d80-93a0-8a9895f6e43d"
+            alt="Service 1">
           <div class="sectionservice-content">
             <img src="iconSite/papier.png" alt="Logo 1" class="sectionservice-logo">
 
@@ -356,7 +726,10 @@
           </div>
         </div>
         <div class="sectionservice-card">
-          <img src="imgSite/broderie.jpg" alt="Service 2">
+          <!-- <img src="imgSite/broderie.jpg" alt="Service 2"> -->
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/mtssarl-28760.appspot.com/o/images%20site%2Fbroderie.jpg?alt=media&token=4cd83179-ac73-425e-9953-d169a87efa1e"
+            alt="Service 2">
           <div class="sectionservice-content">
             <img src="iconSite/cerceau-de-broderie.png" alt="Logo 2" class="sectionservice-logo">
             <p>
@@ -366,7 +739,10 @@
           </div>
         </div>
         <div class="sectionservice-card">
-          <img src="imgSite/Serigaphe.jpg" alt="Service 3">
+          <!-- <img src="imgSite/Serigaphe.jpg" alt="Service 3"> -->
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/mtssarl-28760.appspot.com/o/images%20site%2FSerigaphe.jpg?alt=media&token=52decdec-b9b0-493c-9f10-81b0d9d2d0c3"
+            alt="Service 3">
           <div class="sectionservice-content">
             <img src="iconSite/serigraphie.png" alt="Logo 3" class="sectionservice-logo">
 
@@ -377,7 +753,10 @@
           </div>
         </div>
         <div class="sectionservice-card">
-          <img src="imgSite/signalétique.jpg" alt="Service 3">
+          <!-- <img src="imgSite/signalétique.jpg" alt="Service 3"> -->
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/mtssarl-28760.appspot.com/o/images%20site%2Fsignal%C3%A9tique.jpg?alt=media&token=ac86f3c3-92ca-4dc4-90ce-fc6afbc2c7ba"
+            alt="Service 3">
           <div class="sectionservice-content">
             <img src="iconSite/un-d.png" alt="Logo 3" class="sectionservice-logo">
 
@@ -387,7 +766,10 @@
           </div>
         </div>
         <div class="sectionservice-card">
-          <img src="imgSite/tampographie.jpg" alt="Service 3">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/mtssarl-28760.appspot.com/o/images%20site%2Ftampographie.jpg?alt=media&token=e33f6a9b-bf53-4953-9317-f376c471e21b"
+            alt="Service 3">
+          <!-- <img src="imgSite/tampographie.jpg" alt="Service 3"> -->
           <div class="sectionservice-content">
             <img src="iconSite/tampographie.png" alt="Logo 3" class="sectionservice-logo">
             <p>
@@ -396,7 +778,10 @@
           </div>
         </div>
         <div class="sectionservice-card">
-          <img src="imgSite/Packaging.jpg" alt="Service 3">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/mtssarl-28760.appspot.com/o/images%20site%2FPackaging.jpg?alt=media&token=2477870f-83b0-4d69-97d1-db31bd072aea"
+            alt="Service 3">
+          <!-- <img src="imgSite/Packaging.jpg" alt="Service 3"> -->
           <div class="sectionservice-content">
             <img src="iconSite/eco-packaging.png" alt="Logo 3" class="sectionservice-logo">
 
@@ -411,10 +796,13 @@
       document.addEventListener('DOMContentLoaded', function () {
         const cursor = document.querySelector('.custom-cursor');
 
-        document.addEventListener('mousemove', function (e) {
-          cursor.style.left = e.pageX + 'px';
-          cursor.style.top = e.pageY + 'px';
-        });
+        // Vérifier que le curseur existe avant de l'utiliser
+        if (cursor) {
+          document.addEventListener('mousemove', function (e) {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+          });
+        }
 
         document.addEventListener('scroll', function () {
           const sectionserviceCards = document.querySelectorAll('.sectionservice-card');
@@ -440,16 +828,16 @@
     <section id="testimonials" class="testimonials section">
 
       <!-- Section Title -->
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Nos produits</h2>
-        <p>Qualité et Rigueur : L'Excellence à Chaque Étape de Votre Projet</p>
-      </div><!-- End Section Title -->
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Nos produits</h2>
+          <p>Qualité et Rigueur : L'Excellence à Chaque Étape de Votre Projet</p>
+        </div><!-- End Section Title -->
 
-      <div class="container">
+
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
@@ -461,574 +849,591 @@
             <li data-filter=".filter-books">Sérigraphie</li>
             <li data-filter=".filter-signal">Signalétique</li>
             <li data-filter=".filter-tampo">Tampographie</li>
-          </ul><!-- End Portfolio Filters -->
+          </ul>
+          <div class="container" style="height: 120vh;overflow-y: auto;">
+            <div class="row gy-4 portfolio-container  isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/badges2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/badges2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="broderie.html" title="More Details">Badges</a></h4>
-                  <p>Personnalisez chaque détail avec broderie.</p>
+                    <!--           
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/badges2.jpg" data-gallery="portfolio-gallery-app" class="glightbox">
+                    <img src="imgSite/badges2.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="broderie.html" title="More Details">Badges</a></h4>
+                    <p>Personnalisez chaque détail avec broderie.</p>
+                  </div>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/brands-people-0adHvNJu-Zo-unsplash.jpg" data-gallery="portfolio-gallery-app"
-                  class="glightbox"><img src="imgSite/brands-people-0adHvNJu-Zo-unsplash.jpg" class="img-fluid"
-                    alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="imprimerie.html" title="More Details">Magazines, flyers et brochures</a></h4>
-                  <p>Votre histoire, votre style ! 📰✨</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-signal">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/signalétique.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/signalétique.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="signaletique.html" title="More Details">Enseigne lumineuse</a></h4>
-                  <p>Donnez de l'eclat à votre présence.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tampo">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/trophee.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/trophee.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="tampographie.html" title="More Details">Trophée en bois personnalisée</a></h4>
-                  <p>Chaque victoire doit être célébré.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-signal">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/enseigne en vinile.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/enseigne en vinile.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="signaletique.html" title="More Details">Enseigne en vinile</a></h4>
-                  <p>Un effet brillant avec la nature.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/Billets.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/Billets.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="imprimerie.html" title="More Details">Billets d'invitation et cartes de voeux</a></h4>
-                  <p>Faite part de vos évènements avec grâce.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-signal">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/3885601.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/3885601.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="signaletique.html" title="More Details">Enseigne en bois</a></h4>
-                  <p>L'art de la présence tout en discrétion.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/sac.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/sac.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="packaging.html" title="More Details">Shopping bags</a></h4>
-                  <p>Shopping bags personnalisés : portez vos valeurs, affichez votre style</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-signal">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/drapeau.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/drapeau.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="signaletique.html" title="More Details">Drapeau</a></h4>
-                  <p>La fierté de la marque.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/tshirt2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/tshirt2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="serigraphie.html" title="More Details">Vêtement personnalisés</a></h4>
-                  <p>Définissez votre marque.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/chapeau2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/chapeau2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="broderie.html" title="More Details">Casquette personnalisée</a></h4>
-                  <p>Style tissé avec soin et créativité!</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tampo">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/stylopersonnalisé.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/stylopersonnalisé.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="tampographie.html" title="More Details">Stylo personnalisée</a></h4>
-                  <p>Demarquez vous par votre écriture.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/formulaires.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/formulaires.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="imprimerie.html" title="More Details">Formulaires et carnets de reçu</a></h4>
-                  <p>Simplifiez vos démarches et boostez votre productivité </p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/emballages.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/emballages.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="packaging.html" title="More Details">Emballages</a></h4>
-                  <p>Des emballages uniques conçus pour représenter votre marque et attirer l'attention de vos clients.
-                  </p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/emballagesboite.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/emballagesboite.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="packaging.html" title="More Details">Boite en carton</a></h4>
-                  <p>Des boîtes personnalisées adaptées à vos besoins spécifiques, garantissant une présentation
-                    élégante de vos produits.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tampo">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/presentoir.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/presentoir.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="tampographie.html" title="More Details">Chevalet porte nom</a></h4>
-                  <p>Faites savoir qui vous êtes.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/affiche1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/affiche1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="serigraphie.html" title="More Details">Affiches, flyers</a></h4>
-                  <p>Materialisez vos idées.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/catshirt.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/catshirt.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="broderie.html" title="More Details">Ensemble Tshirt chapeau</a></h4>
-                  <p>Chaque point, une œuvre d'art.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tampo">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/gourdeperson.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/gourdeperson.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="tampographie.html" title="More Details">Gourdes personnalisées</a></h4>
-                  <p>Un design robuste pour un style unique !.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/carte de visite.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/carte de visite.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="offset.html" title="More Details">Carte de visite</a></h4>
-                  <p>Des cartes de visite qui font mouche ! Votre première impression est la plus importante. </p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-
-
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/gadget pub.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/gadget pub.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="serigraphie.html" title="More Details">Gadgets publicitaires</a></h4>
-                  <p>Utilisez ce qui vous ressemble.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <a href="imgSite/sac sec.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
-                    src="imgSite/sac sec.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="serigraphie.html" title="More Details">Sacs</a></h4>
-                  <p>Des sacs durables à votre image.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Notre Team</h2>
-        <p>Notre force réside dans notre équipe dévouée : unis par la passion, guidés par l'innovation, et déterminés à dépasser vos attentes à chaque étape.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-              <h4>Mr Kuekam Guy Marcel</h4>
-              <span>Directeur générale</span>
-              <div class="social">
-                <a href="https://wa.me/237677775331"><i class="bi bi-whatsapp"></i></a>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-              <h4>Mr Nitcheu Raudolphe</h4>
-              <span>Responsable Commercial </span>
-              <div class="social">
-                <a href="https://wa.me/237677775331"><i class="bi bi-whatsapp"></i></a>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-         
-
-        </div>
-
-      </div>
-
-    </section><!-- /Team Section -->
-
- 
-           
-
-    <!-- Faq Section -->
-    <section id="faq" class="faq section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="content px-xl-5">
-              <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-            </div>
-          </div>
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="faq-container">
-              <div class="faq-item faq-active">
-                <h3><span class="num">1.</span> <span> Quels services proposez-vous ?</span></h3>
-                <div class="faq-content">
-                  <p>Nous proposons une gamme complète de services incluant la broderie, l'imprimerie, le packaging, la
-                    sérigraphie, la signalétique et la tampographie.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">2.</span> <span>Quels types de produits pouvez-vous personnaliser ?</span></h3>
-                <div class="faq-content">
-                  <p>Nous pouvons personnaliser une variété de produits, tels que des vêtements, des accessoires, des
-                    emballages, des panneaux, des affiches, et bien plus encore.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">3.</span> <span> Quels sont les délais de réalisation de vos services ?</span>
-                </h3>
-                <div class="faq-content">
-                  <p>Les délais varient en fonction de la complexité et de la quantité de la commande. Généralement, les
-                    petites commandes sont réalisées en une à deux semaines, tandis que les commandes plus importantes
-                    peuvent prendre un peu plus de temps. Nous vous fournirons un délai estimé lors de la confirmation
-                    de votre commande.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">4.</span> <span>Offrez-vous des services de conception graphique ?</span></h3>
-                <div class="faq-content">
-                  <p>Oui, nous avons une équipe de designers expérimentés qui peuvent vous aider à créer des designs
-                    uniques et professionnels pour vos projets.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">5.</span> <span>Puis-je fournir mes propres designs pour les produits ?</span>
-                </h3>
-                <div class="faq-content">
-                  <p>Absolument, vous pouvez fournir vos propres designs. Nous acceptons les fichiers dans divers
-                    formats tels que JPEG, PNG, AI, et PDF.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-              <div class="faq-item">
-                <h3><span class="num">6.</span> <span>Quels sont vos tarifs ?</span></h3>
-                <div class="faq-content">
-                  <p>Nos tarifs dépendent du type de service, de la quantité et de la complexité du projet. Pour obtenir
-                    un devis précis, veuillez nous contacter avec les détails de votre commande.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">7.</span> <span>Quels sont les minimums de commande pour chaque service ?</span>
-                </h3>
-                <div class="faq-content">
-                  <p>Les minimums de commande varient selon le service. Pour la broderie et la sérigraphie, le minimum
-                    est généralement de 10 pièces. Pour les services d'imprimerie et de packaging, nous recommandons de
-                    nous contacter pour discuter de vos besoins spécifiques.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">8.</span> <span>Offrez-vous des échantillons avant la production complète ?</span>
-                </h3>
-                <div class="faq-content">
-                  <p>Oui, nous offrons des échantillons pour vous assurer que vous êtes satisfait du design et de la
-                    qualité avant de lancer la production complète.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">9.</span> <span>Quels sont vos modes de paiement ?</span></h3>
-                <div class="faq-content">
-                  <p>Nous acceptons divers modes de paiement, y compris les virements bancaires, les cartes de crédit et
-                    PayPal.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">10.</span> <span>Livrez-vous à l'international ?</span></h3>
-                <div class="faq-content">
-                  <p>Oui, nous pouvons expédier nos produits à l'international. Les frais et délais de livraison varient
-                    en fonction de la destination.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">11.</span> <span>Comment puis-je passer commande ?</span></h3>
-                <div class="faq-content">
-                  <p>Pour passer commande, vous pouvez nous contacter via notre formulaire de contact en ligne, par
-                    téléphone ou par e-mail. Fournissez-nous les détails de votre projet, et nous vous guiderons à
-                    travers le processus.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">12.</span> <span>Que faire si j'ai un problème avec ma commande ?</span></h3>
-                <div class="faq-content">
-                  <p>Si vous rencontrez un problème avec votre commande, veuillez nous contacter immédiatement. Nous
-                    nous engageons à résoudre tout problème rapidement et efficacement pour garantir votre satisfaction.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">13.</span> <span>Avez-vous des options écologiques ?</span></h3>
-                <div class="faq-content">
-                  <p>Oui, nous offrons des options écologiques pour certains de nos services et produits. N'hésitez pas
-                    à nous demander plus de détails si vous êtes intéressé par des solutions respectueuses de
-                    l'environnement.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">14.</span> <span>Proposez-vous des services de rebranding ?</span></h3>
-                <div class="faq-content">
-                  <p>Oui, nous pouvons vous aider à redéfinir et moderniser votre image de marque à travers nos divers
-                    services de personnalisation et de design.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Faq Section -->
-
-
-
             
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Nous sommes impatients de donner vie à votre projet ! Laissez-nous vos détails et nous vous contacterons rapidement.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gx-lg-0 gy-4">
-
-          <div class="col-lg-4">
-            <div class="info-container d-flex flex-column align-items-center justify-content-center">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>Ancien pharmacie Bonadibong</p>
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/brands-people-0adHvNJu-Zo-unsplash.jpg" data-gallery="portfolio-gallery-app"
+                    class="glightbox"><img src="imgSite/brands-people-0adHvNJu-Zo-unsplash.jpg" class="img-fluid"
+                      alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="imprimerie.html" title="More Details">Magazines, flyers et brochures</a></h4>
+                    <p>Votre histoire, votre style ! 📰✨</p>
+                  </div>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p style="color: white;">+237 677 775 331</p>
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-signal">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/signalétique.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/signalétique.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="signaletique.html" title="More Details">Enseigne lumineuse</a></h4>
+                    <p>Donnez de l'eclat à votre présence.</p>
+                  </div>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>megatradingsarl@gmail.com</p>
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tampo">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/trophee.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/trophee.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="tampographie.html" title="More Details">Trophée en bois personnalisée</a></h4>
+                    <p>Chaque victoire doit être célébré.</p>
+                  </div>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-signal">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/enseigne en vinile.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/enseigne en vinile.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="signaletique.html" title="More Details">Enseigne en vinile</a></h4>
+                    <p>Un effet brillant avec la nature.</p>
+                  </div>
+                </div>
+              </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                <i class="bi bi-clock flex-shrink-0"></i>
-                <div>
-                  <h3>Open Hours:</h3>
-                  <p>Lun - Ven : 08h00 - 17h00</p>
-                  <p>Sam : 08h00 - 15h00</p>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/Billets.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/Billets.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="imprimerie.html" title="More Details">Billets d'invitation et cartes de voeux</a></h4>
+                    <p>Faite part de vos évènements avec grâce.</p>
+                  </div>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-signal">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/3885601.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/3885601.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="signaletique.html" title="More Details">Enseigne en bois</a></h4>
+                    <p>L'art de la présence tout en discrétion.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/sac.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/sac.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="packaging.html" title="More Details">Shopping bags</a></h4>
+                    <p>Shopping bags personnalisés : portez vos valeurs, affichez votre style</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-signal">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/drapeau.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/drapeau.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="signaletique.html" title="More Details">Drapeau</a></h4>
+                    <p>La fierté de la marque.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/tshirt2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/tshirt2.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="serigraphie.html" title="More Details">Vêtement personnalisés</a></h4>
+                    <p>Définissez votre marque.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/chapeau2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/chapeau2.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="broderie.html" title="More Details">Casquette personnalisée</a></h4>
+                    <p>Style tissé avec soin et créativité!</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tampo">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/stylopersonnalisé.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/stylopersonnalisé.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="tampographie.html" title="More Details">Stylo personnalisée</a></h4>
+                    <p>Demarquez vous par votre écriture.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/formulaires.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/formulaires.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="imprimerie.html" title="More Details">Formulaires et carnets de reçu</a></h4>
+                    <p>Simplifiez vos démarches et boostez votre productivité </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/emballages.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/emballages.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="packaging.html" title="More Details">Emballages</a></h4>
+                    <p>Des emballages uniques conçus pour représenter votre marque et attirer l'attention de vos
+                      clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/emballagesboite.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/emballagesboite.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="packaging.html" title="More Details">Boite en carton</a></h4>
+                    <p>Des boîtes personnalisées adaptées à vos besoins spécifiques, garantissant une présentation
+                      élégante de vos produits.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tampo">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/presentoir.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/presentoir.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="tampographie.html" title="More Details">Chevalet porte nom</a></h4>
+                    <p>Faites savoir qui vous êtes.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/affiche1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/affiche1.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="serigraphie.html" title="More Details">Affiches, flyers</a></h4>
+                    <p>Materialisez vos idées.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/catshirt.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/catshirt.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="broderie.html" title="More Details">Ensemble Tshirt chapeau</a></h4>
+                    <p>Chaque point, une œuvre d'art.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tampo">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/gourdeperson.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/gourdeperson.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="tampographie.html" title="More Details">Gourdes personnalisées</a></h4>
+                    <p>Un design robuste pour un style unique !.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/carte de visite.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/carte de visite.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="offset.html" title="More Details">Carte de visite</a></h4>
+                    <p>Des cartes de visite qui font mouche ! Votre première impression est la plus importante. </p>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/gadget pub.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/gadget pub.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="serigraphie.html" title="More Details">Gadgets publicitaires</a></h4>
+                    <p>Utilisez ce qui vous ressemble.</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+                <div class="portfolio-content h-100">
+                  <a href="imgSite/sac sec.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img
+                      src="imgSite/sac sec.jpg" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4><a href="serigraphie.html" title="More Details">Sacs</a></h4>
+                    <p>Des sacs durables à votre image.</p>
+                  </div>
+                </div>
+              </div>
+
+               -->
 
             </div>
 
           </div>
 
-          <div class="col-lg-8">
-            <form action="https://api.web3forms.com/submit" method="post" class="php-email-form" data-aos="fade" data-aos-delay="100">
-              <input
-              type="hidden"
-              name="access_key"
-              value="1eb11de0-bf8b-41c1-966f-61df71127b80"
-            />
-              <div class="row gy-4">
+        </div>
 
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+      </section><!-- /Portfolio Section -->
+
+      <!-- Team Section -->
+      <section id="team" class="team section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Notre Team</h2>
+          <p>Notre force réside dans notre équipe dévouée : unis par la passion, guidés par l'innovation, et déterminés
+            à dépasser vos attentes à chaque étape.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+          <div class="row gy-4">
+
+            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+              <div class="member">
+                <!-- <img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""> -->
+                <h4>Mr Kuekam Guy Marcel</h4>
+                <span>Directeur générale</span>
+                <div class="social">
+                  <a href="https://wa.me/237677775331"><i class="bi bi-whatsapp"></i></a>
                 </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="tel" class="form-control" name="tel" placeholder="Phone" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="8" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
               </div>
-            </form>
-          </div><!-- End Contact Form -->
+            </div><!-- End Team Member -->
+
+            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+              <div class="member">
+                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <h4>Mr Nitche Raudolphe</h4>
+                <span>Responsable Commercial </span>
+                <div class="social">
+                  <a href="https://wa.me/237677775331"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+            </div><!-- End Team Member -->
+
+
+
+          </div>
 
         </div>
 
-      </div>
+      </section><!-- /Team Section -->
 
-    </section><!-- /Contact Section -->
+
+
+
+      <!-- Faq Section -->
+      <section id="faq" class="faq section">
+
+        <div class="container">
+
+          <div class="row gy-4">
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="content px-xl-5">
+                <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+              </div>
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="faq-container">
+                <div class="faq-item faq-active">
+                  <h3><span class="num">1.</span> <span> Quels services proposez-vous ?</span></h3>
+                  <div class="faq-content">
+                    <p>Nous proposons une gamme complète de services incluant la broderie, l'imprimerie, le packaging,
+                      la
+                      sérigraphie, la signalétique et la tampographie.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">2.</span> <span>Quels types de produits pouvez-vous personnaliser ?</span></h3>
+                  <div class="faq-content">
+                    <p>Nous pouvons personnaliser une variété de produits, tels que des vêtements, des accessoires, des
+                      emballages, des panneaux, des affiches, et bien plus encore.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">3.</span> <span> Quels sont les délais de réalisation de vos services ?</span>
+                  </h3>
+                  <div class="faq-content">
+                    <p>Les délais varient en fonction de la complexité et de la quantité de la commande. Généralement,
+                      les
+                      petites commandes sont réalisées en une à deux semaines, tandis que les commandes plus importantes
+                      peuvent prendre un peu plus de temps. Nous vous fournirons un délai estimé lors de la confirmation
+                      de votre commande.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">4.</span> <span>Offrez-vous des services de conception graphique ?</span></h3>
+                  <div class="faq-content">
+                    <p>Oui, nous avons une équipe de designers expérimentés qui peuvent vous aider à créer des designs
+                      uniques et professionnels pour vos projets.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">5.</span> <span>Puis-je fournir mes propres designs pour les produits ?</span>
+                  </h3>
+                  <div class="faq-content">
+                    <p>Absolument, vous pouvez fournir vos propres designs. Nous acceptons les fichiers dans divers
+                      formats tels que JPEG, PNG, AI, et PDF.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+                <div class="faq-item">
+                  <h3><span class="num">6.</span> <span>Quels sont vos tarifs ?</span></h3>
+                  <div class="faq-content">
+                    <p>Nos tarifs dépendent du type de service, de la quantité et de la complexité du projet. Pour
+                      obtenir
+                      un devis précis, veuillez nous contacter avec les détails de votre commande.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">7.</span> <span>Quels sont les minimums de commande pour chaque service ?</span>
+                  </h3>
+                  <div class="faq-content">
+                    <p>Les minimums de commande varient selon le service. Pour la broderie et la sérigraphie, le minimum
+                      est généralement de 10 pièces. Pour les services d'imprimerie et de packaging, nous recommandons
+                      de
+                      nous contacter pour discuter de vos besoins spécifiques.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">8.</span> <span>Offrez-vous des échantillons avant la production complète
+                      ?</span>
+                  </h3>
+                  <div class="faq-content">
+                    <p>Oui, nous offrons des échantillons pour vous assurer que vous êtes satisfait du design et de la
+                      qualité avant de lancer la production complète.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">9.</span> <span>Quels sont vos modes de paiement ?</span></h3>
+                  <div class="faq-content">
+                    <p>Nous acceptons divers modes de paiement, y compris les virements bancaires, les cartes de crédit
+                      et
+                      PayPal.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">10.</span> <span>Livrez-vous à l'international ?</span></h3>
+                  <div class="faq-content">
+                    <p>Oui, nous pouvons expédier nos produits à l'international. Les frais et délais de livraison
+                      varient
+                      en fonction de la destination.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">11.</span> <span>Comment puis-je passer commande ?</span></h3>
+                  <div class="faq-content">
+                    <p>Pour passer commande, vous pouvez nous contacter via notre formulaire de contact en ligne, par
+                      téléphone ou par e-mail. Fournissez-nous les détails de votre projet, et nous vous guiderons à
+                      travers le processus.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">12.</span> <span>Que faire si j'ai un problème avec ma commande ?</span></h3>
+                  <div class="faq-content">
+                    <p>Si vous rencontrez un problème avec votre commande, veuillez nous contacter immédiatement. Nous
+                      nous engageons à résoudre tout problème rapidement et efficacement pour garantir votre
+                      satisfaction.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">13.</span> <span>Avez-vous des options écologiques ?</span></h3>
+                  <div class="faq-content">
+                    <p>Oui, nous offrons des options écologiques pour certains de nos services et produits. N'hésitez
+                      pas
+                      à nous demander plus de détails si vous êtes intéressé par des solutions respectueuses de
+                      l'environnement.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span class="num">14.</span> <span>Proposez-vous des services de rebranding ?</span></h3>
+                  <div class="faq-content">
+                    <p>Oui, nous pouvons vous aider à redéfinir et moderniser votre image de marque à travers nos divers
+                      services de personnalisation et de design.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </section><!-- /Faq Section -->
+
+
+
+
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>Nous sommes impatients de donner vie à votre projet ! Laissez-nous vos détails et nous vous contacterons
+            rapidement.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row gx-lg-0 gy-4">
+
+            <div class="col-lg-4">
+              <div class="info-container d-flex flex-column align-items-center justify-content-center">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Address</h3>
+                    <p>Ancien pharmacie Bonadibong</p>
+                  </div>
+                </div><!-- End Info Item -->
+
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call Us</h3>
+                    <p style="color: white;">+237 677 775 331</p>
+                  </div>
+                </div><!-- End Info Item -->
+
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email Us</h3>
+                    <p>megatradingsarl@gmail.com</p>
+                  </div>
+                </div><!-- End Info Item -->
+
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                  <i class="bi bi-clock flex-shrink-0"></i>
+                  <div>
+                    <h3>Open Hours:</h3>
+                    <p>Lun - Ven : 08h00 - 17h00</p>
+                    <p>Sam : 08h00 - 15h00</p>
+                  </div>
+                </div><!-- End Info Item -->
+
+              </div>
+
+            </div>
+
+            <div class="col-lg-8">
+              <form action="https://api.web3forms.com/submit" method="post" class="php-email-form" data-aos="fade"
+                data-aos-delay="100">
+                <input type="hidden" name="access_key" value="1eb11de0-bf8b-41c1-966f-61df71127b80" />
+                <div class="row gy-4">
+
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  </div>
+
+                  <div class="col-md-6 ">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  </div>
+
+                  <div class="col-md-6 ">
+                    <input type="tel" class="form-control" name="tel" placeholder="Phone" required="">
+                  </div>
+
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  </div>
+
+                  <div class="col-md-12">
+                    <textarea class="form-control" name="message" rows="8" placeholder="Message" required=""></textarea>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                    <button type="submit">Send Message</button>
+                  </div>
+
+                </div>
+              </form>
+            </div><!-- End Contact Form -->
+
+          </div>
+
+        </div>
+
+      </section><!-- /Contact Section -->
 
   </main>
 
@@ -1040,13 +1445,15 @@
           <a href="index.html">
             <img src="assets/img/Logo1-removebg-preview.png" alt="Logo" class="logo-img"
               style="height: 50px;margin-right: 0.5rem;" />
-            
+
           </a>
           <p style="color: wheat;
                 font-size: 17px;
                 font-family: 'Poppins', sans-serif;">Mega Trading & Services</p>
-          <p style="color: wheat;">Votre source de créativité et de qualité. Impression, broderie, sérigraphie, tampographie, signalétique et packaging : tout ce dont vous avez besoin pour faire briller votre marque, sous un même toit.</p>
-       
+          <p style="color: wheat;">Votre source de créativité et de qualité. Impression, broderie, sérigraphie,
+            tampographie, signalétique et packaging : tout ce dont vous avez besoin pour faire briller votre marque,
+            sous un même toit.</p>
+
         </div>
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
@@ -1057,7 +1464,7 @@
             <li><a href="signaletique.html">Signalétique</a></li>
             <li><a href="serigraphie.html">Sérigraphie</a></li>
             <li><a href="packaging.html">Packaging</a></li>
-           
+
           </ul>
         </div>
 
@@ -1070,7 +1477,7 @@
           </ul>
         </div>
 
-       
+
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
@@ -1086,7 +1493,7 @@
 
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">MTS</strong> <span>All Rights Reserved</span></p>
-     
+
     </div>
 
   </footer>
@@ -1108,9 +1515,20 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- <script src="assets/js/firebase/scriptFirebase/firebaseConfig.js"></script> -->
+  <script src="assets/js/gestionPage.js"></script>
 
+  <script type="module" src="assets/js/firebase/scriptFirebase/scriptFirebas.js"></script>
+
+
+  <script src="assets/js/main.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+  <script src="assets/js/scriptGestionPage.js"></script>
+  <script src="assets/js/firebase/scriptProduit.js"></script>
+  <!-- <script src="assets/js/firebase/scriptFirebase/scriptimprimerie.js"></script> -->
 </body>
 
 </html>
