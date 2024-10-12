@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { buttonId: "tampographiebutton", descId: "tampographiedesc" },
     { buttonId: "signalétiquebutton", descId: "signalétiquedesc" },
     { buttonId: "packagingbutton", descId: "packagingdesc" },
+    { buttonId: "teambutton", descId: "teamdesc" },
   ];
 
   // Fonction pour masquer toutes les descriptions

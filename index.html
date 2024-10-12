@@ -136,347 +136,6 @@
         </div>
       </div>
 
-
-      <!-- Modale de succès -->
-      <div id="successModal" class="modal1" style="display: none;">
-        <div class="modal-content1">
-          <button class="close-btn" id="closeSuccessModal">&times;</button>
-          <div class="headerdesc">
-            <h4>Page de management du site Mega Trading Sarl</h4>
-          </div>
-          <div style="overflow-y: auto;">
-
-
-            <div class="actionservice">
-              <button class="actionbutton" id="broderiebutton">
-                <img src="iconSite/cerceau-de-broderie.png" />
-                <div>Page de broderie</div>
-              </button>
-              <button class="actionbutton" id="imprimeriebutton">
-                <img src="iconSite/papier.png" />
-                <div>Page d'imprimerie</div>
-              </button>
-              <button class="actionbutton" id="serigaphiebutton">
-                <img src="iconSite/serigraphie.png" />
-                <div>Page de sérigraphie</div>
-              </button>
-              <button class="actionbutton" id="tampographiebutton">
-                <img src="iconSite/tampographie.png" />
-                <div>Page de tampographie</div>
-              </button>
-              <button class="actionbutton" id="signalétiquebutton">
-                <img src="iconSite/un-d.png" />
-                <div>Page de signalétique</div>
-              </button>
-              <button class="actionbutton" id="packagingbutton">
-                <img src="iconSite/eco-packaging.png" />
-                <div>Page de packaging</div>
-              </button>
-            </div>
-            <div class="headerdesc1">
-              <h4>Espace de gestion de contenu</h4>
-            </div>
-            <div class="descSpace" id="broderiedesc" style="display: none">
-              <div style="display: flex">
-                <div style="width: 30%">
-                  <form id="imageFormbroderie" class="InfoForm" enctype="multipart/form-data">
-                    <div>
-                      <label for="imageUpload">Choisissez une image :</label>
-                      <input type="file" id="imageUpload1" name="imageUpload" accept="image/*" required />
-                    </div>
-
-                    <div>
-                      <label for="imageName">Titre de l'image :</label>
-                      <input type="text" id="imageName1" name="imageName" required
-                        placeholder="Entrez le nom de l'image" />
-                    </div>
-
-                    <div>
-                      <label for="imageDescription">Description de l'image :</label>
-                      <textarea id="imageDescription1" name="imageDescription" rows="4"
-                        placeholder="Entrez une description de l'image" required></textarea>
-                    </div>
-
-                    <div>
-                      <button type="submit" class="sendimage">
-                        <span id="spinner1" class="spinner5" style="display: none"></span>
-                        Envoyer
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div class="tableresume">
-                  <!-- <p>Page de broderie</p> -->
-                  <div class="tableresume">
-                    <table id="productTable1">
-                      <thead>
-                        <tr>
-                          <th>Image</th>
-                          <th>Titre de l'image</th>
-                          <th>Description</th>
-                          <th >Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- Les données seront ajoutées ici via JavaScript -->
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="descSpace" id="imprimeriedesc" style="display: none">
-              <div style="display: flex">
-                <div style="width: 30%">
-                  <form id="imageFormimprimerie" class="InfoForm" enctype="multipart/form-data">
-                    <div>
-                      <label for="imageUpload">Choisissez une image :</label>
-                      <input type="file" id="imageUpload2" name="imageUpload" accept="image/*" required />
-                    </div>
-
-                    <div>
-                      <label for="imageName">Titre de l'image :</label>
-                      <input type="text" id="imageName2" name="imageName" required
-                        placeholder="Entrez le nom de l'image" />
-                    </div>
-
-                    <div>
-                      <label for="imageDescription">Description de l'image :</label>
-                      <textarea id="imageDescription2" name="imageDescription" rows="4"
-                        placeholder="Entrez une description de l'image" required></textarea>
-                    </div>
-
-                    <div>
-                      <button type="submit" class="sendimage">
-                        <span id="spinner2" class="spinner5" style="display: none"></span>
-                        Envoyer
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div class="tableresume">
-                  <!-- <p>Page d' imprimerie</p> -->
-                  <div class="tableresume">
-                    <table id="productTable2">
-                      <thead>
-                        <tr>
-                          <th>Image</th>
-                          <th>Titre de l'image</th>
-                          <th>Description</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- Les données seront ajoutées ici via JavaScript -->
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="descSpace" id="sérigraphiedesc" style="display: none">
-              <div style="display: flex">
-                <div style="width: 30%">
-                  <form id="imageFormserigraphie" class="InfoForm" enctype="multipart/form-data">
-                    <div>
-                      <label for="imageUpload">Choisissez une image :</label>
-                      <input type="file" id="imageUpload3" name="imageUpload" accept="image/*" required />
-                    </div>
-
-                    <div>
-                      <label for="imageName">Titre de l'image :</label>
-                      <input type="text" id="imageName3" name="imageName" required
-                        placeholder="Entrez le nom de l'image" />
-                    </div>
-
-                    <div>
-                      <label for="imageDescription">Description de l'image :</label>
-                      <textarea id="imageDescription3" name="imageDescription" rows="4"
-                        placeholder="Entrez une description de l'image" required></textarea>
-                    </div>
-
-                    <div>
-                      <button type="submit" class="sendimage">
-                        <span id="spinner3" class="spinner5" style="display: none"></span>Envoyer
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div class="tableresume">
-                  <!-- <p>Page de serigraphie</p> -->
-                  <div class="tableresume">
-                    <table id="productTable3">
-                      <thead>
-                        <tr>
-                          <th>Image</th>
-                          <th>Titre de l'image</th>
-                          <th>Description</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- Les données seront ajoutées ici via JavaScript -->
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="descSpace" id="signalétiquedesc" style="display: none">
-              <div style="display: flex">
-                <div style="width: 30%">
-                  <form id="imageFormsignaletique" class="InfoForm" enctype="multipart/form-data">
-                    <div>
-                      <label for="imageUpload">Choisissez une image :</label>
-                      <input type="file" id="imageUpload4" name="imageUpload" accept="image/*" required />
-                    </div>
-
-                    <div>
-                      <label for="imageName">Titre de l'image :</label>
-                      <input type="text" id="imageName4" name="imageName" required
-                        placeholder="Entrez le nom de l'image" />
-                    </div>
-
-                    <div>
-                      <label for="imageDescription">Description de l'image :</label>
-                      <textarea id="imageDescription4" name="imageDescription" rows="4"
-                        placeholder="Entrez une description de l'image" required></textarea>
-                    </div>
-
-                    <div>
-                      <button type="submit" class="sendimage">
-                        <span id="spinner4" class="spinner5" style="display: none"></span>
-                        Envoyer
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div class="tableresume">
-                  <!-- <p>Page de signalétique</p> -->
-                  <div class="tableresume">
-                    <table id="productTable4">
-                      <thead>
-                        <tr>
-                          <th>Image</th>
-                          <th>Titre de l'image</th>
-                          <th>Description</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- Les données seront ajoutées ici via JavaScript -->
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="descSpace" id="tampographiedesc" style="display: none">
-              <div style="display: flex">
-                <div style="width: 30%">
-                  <form id="imageFormtampographie" class="InfoForm" enctype="multipart/form-data">
-                    <div>
-                      <label for="imageUpload">Choisissez une image :</label>
-                      <input type="file" id="imageUpload5" name="imageUpload" accept="image/*" required />
-                    </div>
-
-                    <div>
-                      <label for="imageName">Titre de l'image :</label>
-                      <input type="text" id="imageName5" name="imageName" required
-                        placeholder="Entrez le nom de l'image" />
-                    </div>
-
-                    <div>
-                      <label for="imageDescription">Description de l'image :</label>
-                      <textarea id="imageDescription5" name="imageDescription" rows="4"
-                        placeholder="Entrez une description de l'image" required></textarea>
-                    </div>
-
-                    <div>
-                      <button type="submit" class="sendimage">
-                        <span id="spinner5" class="spinner5" style="display: none"></span>Envoyer
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div class="tableresume">
-                  <!-- <p>Page de tampographie</p> -->
-                  <div class="tableresume">
-                    <table id="productTable5">
-                      <thead>
-                        <tr>
-                          <th>Image</th>
-                          <th>Titre de l'image</th>
-                          <th>Description</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- Les données seront ajoutées ici via JavaScript -->
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="descSpace" id="packagingdesc" style="display: none">
-              <div style="display: flex">
-                <div style="width: 30%">
-                  <form id="imageFormpackaging" class="InfoForm" enctype="multipart/form-data">
-                    <div>
-                      <label for="imageUpload">Choisissez une image :</label>
-                      <input type="file" id="imageUpload6" name="imageUpload" accept="image/*" required />
-                    </div>
-
-                    <div>
-                      <label for="imageName">Titre de l'image :</label>
-                      <input type="text" id="imageName6" name="imageName" required
-                        placeholder="Entrez le nom de l'image" />
-                    </div>
-
-                    <div>
-                      <label for="imageDescription">Description de l'image :</label>
-                      <textarea id="imageDescription6" name="imageDescription" rows="4"
-                        placeholder="Entrez une description de l'image" required></textarea>
-                    </div>
-
-                    <div>
-                      <button type="submit" class="sendimage">
-                        <span id="spinner6" class="spinner5" style="display: none"></span>Envoyer
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div class="tableresume">
-                  <!-- <p>Page de packaging</p> -->
-                  <div class="tableresume">
-                    <table id="productTable6">
-                      <thead>
-                        <tr>
-                          <th>Image</th>
-                          <th>Titre de l'image</th>
-                          <th>Description</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- Les données seront ajoutées ici via JavaScript -->
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
@@ -532,6 +191,401 @@
       </div>
 
     </section><!-- /About Section -->
+
+
+
+    <!-- Modale de succès -->
+    <div id="successModal" class="modal1">
+      <div class="modal-content1">
+        <button class="close-btn" id="closeSuccessModal">&times;</button>
+        <div class="headerdesc">
+          <h4>Page de management du site Mega Trading Sarl</h4>
+        </div>
+        <div style="overflow-y: auto;">
+
+
+          <div class="actionservice">
+            <button class="actionbutton" id="broderiebutton">
+              <img src="iconSite/cerceau-de-broderie.png" />
+              <div>Page de broderie</div>
+            </button>
+            <button class="actionbutton" id="imprimeriebutton">
+              <img src="iconSite/papier.png" />
+              <div>Page d'imprimerie</div>
+            </button>
+            <button class="actionbutton" id="serigaphiebutton">
+              <img src="iconSite/serigraphie.png" />
+              <div>Page de sérigraphie</div>
+            </button>
+            <button class="actionbutton" id="tampographiebutton">
+              <img src="iconSite/tampographie.png" />
+              <div>Page de tampographie</div>
+            </button>
+            <button class="actionbutton" id="signalétiquebutton">
+              <img src="iconSite/un-d.png" />
+              <div>Page de signalétique</div>
+            </button>
+            <button class="actionbutton" id="packagingbutton">
+              <img src="iconSite/eco-packaging.png" />
+              <div>Page de packaging</div>
+            </button>
+            <button class="actionbutton" id="teambutton">
+              <img src="iconSite/client.png" />
+              <div>Gestion de la team</div>
+            </button>
+          </div>
+          <div class="headerdesc1">
+            <h4>Espace de gestion de contenu</h4>
+          </div>
+          <div class="descSpace" id="broderiedesc" style="display: none">
+            <div style="display: flex">
+              <div style="width: 30%">
+                <form id="imageFormbroderie" class="InfoForm" enctype="multipart/form-data">
+                  <div>
+                    <label for="imageUpload">Choisissez une image :</label>
+                    <input type="file" id="imageUpload1" name="imageUpload" accept="image/*" required />
+                  </div>
+
+                  <div>
+                    <label for="imageName">Titre de l'image :</label>
+                    <input type="text" id="imageName1" name="imageName" required
+                      placeholder="Entrez le nom de l'image" />
+                  </div>
+
+                  <div>
+                    <label for="imageDescription">Description de l'image :</label>
+                    <textarea id="imageDescription1" name="imageDescription" rows="4"
+                      placeholder="Entrez une description de l'image" required></textarea>
+                  </div>
+
+                  <div>
+                    <button type="submit" class="sendimage">
+                      <span id="spinner1" class="spinner5" style="display: none"></span>
+                      Envoyer
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="tableresume">
+                <!-- <p>Page de broderie</p> -->
+                <div class="tableresume">
+                  <table id="productTable1">
+                    <thead>
+                      <tr>
+                        <th>Image</th>
+                        <th>Titre de l'image</th>
+                        <th>Description</th>
+                        <th >Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Les données seront ajoutées ici via JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="descSpace" id="imprimeriedesc" style="display: none">
+            <div style="display: flex">
+              <div style="width: 30%">
+                <form id="imageFormimprimerie" class="InfoForm" enctype="multipart/form-data">
+                  <div>
+                    <label for="imageUpload">Choisissez une image :</label>
+                    <input type="file" id="imageUpload2" name="imageUpload" accept="image/*" required />
+                  </div>
+
+                  <div>
+                    <label for="imageName">Titre de l'image :</label>
+                    <input type="text" id="imageName2" name="imageName" required
+                      placeholder="Entrez le nom de l'image" />
+                  </div>
+
+                  <div>
+                    <label for="imageDescription">Description de l'image :</label>
+                    <textarea id="imageDescription2" name="imageDescription" rows="4"
+                      placeholder="Entrez une description de l'image" required></textarea>
+                  </div>
+
+                  <div>
+                    <button type="submit" class="sendimage">
+                      <span id="spinner2" class="spinner5" style="display: none"></span>
+                      Envoyer
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="tableresume">
+                <!-- <p>Page d' imprimerie</p> -->
+                <div class="tableresume">
+                  <table id="productTable2">
+                    <thead>
+                      <tr>
+                        <th>Image</th>
+                        <th>Titre de l'image</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Les données seront ajoutées ici via JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="descSpace" id="sérigraphiedesc" style="display: none">
+            <div style="display: flex">
+              <div style="width: 30%">
+                <form id="imageFormserigraphie" class="InfoForm" enctype="multipart/form-data">
+                  <div>
+                    <label for="imageUpload">Choisissez une image :</label>
+                    <input type="file" id="imageUpload3" name="imageUpload" accept="image/*" required />
+                  </div>
+
+                  <div>
+                    <label for="imageName">Titre de l'image :</label>
+                    <input type="text" id="imageName3" name="imageName" required
+                      placeholder="Entrez le nom de l'image" />
+                  </div>
+
+                  <div>
+                    <label for="imageDescription">Description de l'image :</label>
+                    <textarea id="imageDescription3" name="imageDescription" rows="4"
+                      placeholder="Entrez une description de l'image" required></textarea>
+                  </div>
+
+                  <div>
+                    <button type="submit" class="sendimage">
+                      <span id="spinner3" class="spinner5" style="display: none"></span>Envoyer
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="tableresume">
+                <!-- <p>Page de serigraphie</p> -->
+                <div class="tableresume">
+                  <table id="productTable3">
+                    <thead>
+                      <tr>
+                        <th>Image</th>
+                        <th>Titre de l'image</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Les données seront ajoutées ici via JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="descSpace" id="signalétiquedesc" style="display: none">
+            <div style="display: flex">
+              <div style="width: 30%">
+                <form id="imageFormsignaletique" class="InfoForm" enctype="multipart/form-data">
+                  <div>
+                    <label for="imageUpload">Choisissez une image :</label>
+                    <input type="file" id="imageUpload4" name="imageUpload" accept="image/*" required />
+                  </div>
+
+                  <div>
+                    <label for="imageName">Titre de l'image :</label>
+                    <input type="text" id="imageName4" name="imageName" required
+                      placeholder="Entrez le nom de l'image" />
+                  </div>
+
+                  <div>
+                    <label for="imageDescription">Description de l'image :</label>
+                    <textarea id="imageDescription4" name="imageDescription" rows="4"
+                      placeholder="Entrez une description de l'image" required></textarea>
+                  </div>
+
+                  <div>
+                    <button type="submit" class="sendimage">
+                      <span id="spinner4" class="spinner5" style="display: none"></span>
+                      Envoyer
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="tableresume">
+                <!-- <p>Page de signalétique</p> -->
+                <div class="tableresume">
+                  <table id="productTable4">
+                    <thead>
+                      <tr>
+                        <th>Image</th>
+                        <th>Titre de l'image</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Les données seront ajoutées ici via JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="descSpace" id="tampographiedesc" style="display: none">
+            <div style="display: flex">
+              <div style="width: 30%">
+                <form id="imageFormtampographie" class="InfoForm" enctype="multipart/form-data">
+                  <div>
+                    <label for="imageUpload">Choisissez une image :</label>
+                    <input type="file" id="imageUpload5" name="imageUpload" accept="image/*" required />
+                  </div>
+
+                  <div>
+                    <label for="imageName">Titre de l'image :</label>
+                    <input type="text" id="imageName5" name="imageName" required
+                      placeholder="Entrez le nom de l'image" />
+                  </div>
+
+                  <div>
+                    <label for="imageDescription">Description de l'image :</label>
+                    <textarea id="imageDescription5" name="imageDescription" rows="4"
+                      placeholder="Entrez une description de l'image" required></textarea>
+                  </div>
+
+                  <div>
+                    <button type="submit" class="sendimage">
+                      <span id="spinner5" class="spinner5" style="display: none"></span>Envoyer
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="tableresume">
+                <!-- <p>Page de tampographie</p> -->
+                <div class="tableresume">
+                  <table id="productTable5">
+                    <thead>
+                      <tr>
+                        <th>Image</th>
+                        <th>Titre de l'image</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Les données seront ajoutées ici via JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="descSpace" id="packagingdesc" style="display: none">
+            <div style="display: flex">
+              <div style="width: 30%">
+                <form id="imageFormpackaging" class="InfoForm" enctype="multipart/form-data">
+                  <div>
+                    <label for="imageUpload">Choisissez une image :</label>
+                    <input type="file" id="imageUpload6" name="imageUpload" accept="image/*" required />
+                  </div>
+
+                  <div>
+                    <label for="imageName">Titre de l'image :</label>
+                    <input type="text" id="imageName6" name="imageName" required
+                      placeholder="Entrez le nom de l'image" />
+                  </div>
+
+                  <div>
+                    <label for="imageDescription">Description de l'image :</label>
+                    <textarea id="imageDescription6" name="imageDescription" rows="4"
+                      placeholder="Entrez une description de l'image" required></textarea>
+                  </div>
+
+                  <div>
+                    <button type="submit" class="sendimage">
+                      <span id="spinner6" class="spinner5" style="display: none"></span>Envoyer
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="tableresume">
+                <!-- <p>Page de packaging</p> -->
+                <div class="tableresume">
+                  <table id="productTable6">
+                    <thead>
+                      <tr>
+                        <th>Image</th>
+                        <th>Titre de l'image</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Les données seront ajoutées ici via JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="descSpace" id="teamdesc" style="display: none">
+            <div style="display: flex">
+              <div style="width: 30%">
+                <form id="imageFormteam" class="InfoForm" enctype="multipart/form-data">
+                  <div>
+                    <label for="imageUpload">Choisissez une image :</label>
+                    <input type="file" id="imageUpload7" name="imageUpload" accept="image/*" required />
+                  </div>
+
+                  <div>
+                    <label for="imageName">Nom du personnel:</label>
+                    <input type="text" id="imageName7" name="imageName" required
+                      placeholder="Entrez le nom de l'image" />
+                  </div>
+
+                  <div>
+                    <label for="imageDescription">Poste occupé :</label>
+                    <input id="imageDescription7" name="imageDescription"
+                      placeholder="Entrez une description de l'image" required/>
+                  </div>
+                  <div>
+                    <label for="telpersonel">Numéro de téléphone :</label>
+                    <input  type="tel" id="telpersonel" name="telpersonel" 
+                      placeholder="Entrez le numéro de téléphone" required />
+                  </div>
+
+                  <div>
+                    <button type="submit" class="sendimage">
+                      <span id="spinner7" class="spinner5" style="display: none"></span>Envoyer
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="tableresume">
+                <!-- <p>Page de packaging</p> -->
+                <div class="tableresume">
+                  <table id="productTable7">
+                    <thead>
+                      <tr>
+                        <th>Image</th>
+                        <th>Nom du personnel</th>
+                        <th>Poste occupé</th>
+                        <th>Numéro de téléphone</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Les données seront ajoutées ici via JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- Clients Section -->
     <section id="clients" class="clients section">
@@ -1129,29 +1183,30 @@
 
         <div class="container">
 
-          <div class="row gy-4">
-
+          <div class="row gy-4  team-info">
+<!-- 
             <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
               <div class="member">
-                <!-- <img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""> -->
-                <h4>Mr Kuekam Guy Marcel</h4>
+                <img src="assets\img\portfolio\Team\team-1.jpg" class="img-fluid" alt="">
+                <h4>Kuekam Guy Marcel</h4>
                 <span>Directeur générale</span>
                 <div class="social">
                   <a href="https://wa.me/237677775331"><i class="bi bi-whatsapp"></i></a>
                 </div>
               </div>
-            </div><!-- End Team Member -->
+            </div>End Team Member -->
 
-            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <!-- <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
               <div class="member">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <h4>Mr Nitche Raudolphe</h4>
+                <img src="assets\img\portfolio\Team\team-1.jpg" class="img-fluid" alt="">
+                <h4>Nitche Raudolphe</h4>
                 <span>Responsable Commercial </span>
                 <div class="social">
                   <a href="https://wa.me/237677775331"><i class="bi bi-whatsapp"></i></a>
                 </div>
               </div>
-            </div><!-- End Team Member -->
+            </div>End Team Member -->
+            
 
 
 
@@ -1245,7 +1300,7 @@
                   </h3>
                   <div class="faq-content">
                     <p>Les minimums de commande varient selon le service. Pour la broderie et la sérigraphie, le minimum
-                      est généralement de 10 pièces. Pour les services d'imprimerie et de packaging, nous recommandons
+                      est généralement de 20 pièces. Pour les services d'imprimerie et de packaging, nous recommandons
                       de
                       nous contacter pour discuter de vos besoins spécifiques.</p>
                   </div>
@@ -1266,9 +1321,8 @@
                 <div class="faq-item">
                   <h3><span class="num">9.</span> <span>Quels sont vos modes de paiement ?</span></h3>
                   <div class="faq-content">
-                    <p>Nous acceptons divers modes de paiement, y compris les virements bancaires, les cartes de crédit
-                      et
-                      PayPal.</p>
+                    <p>Nous acceptons divers modes de paiement, y compris les virements bancaires et les cartes de crédit
+                      .</p>
                   </div>
                   <i class="faq-toggle bi bi-chevron-right"></i>
                 </div><!-- End Faq item-->
@@ -1374,7 +1428,7 @@
                   <i class="bi bi-envelope flex-shrink-0"></i>
                   <div>
                     <h3>Email Us</h3>
-                    <p>megatradingsarl@gmail.com</p>
+                    <p href="mailto:megatradingsarl@gmail.com">megatradingsarl@gmail.com</p>
                   </div>
                 </div><!-- End Info Item -->
 
@@ -1449,7 +1503,7 @@
           </a>
           <p style="color: wheat;
                 font-size: 17px;
-                font-family: 'Poppins', sans-serif;">Mega Trading & Services</p>
+                font-family: 'Poppins', sans-serif;" >Mega Trading & Services</p>
           <p style="color: wheat;">Votre source de créativité et de qualité. Impression, broderie, sérigraphie,
             tampographie, signalétique et packaging : tout ce dont vous avez besoin pour faire briller votre marque,
             sous un même toit.</p>
